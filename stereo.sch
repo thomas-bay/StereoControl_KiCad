@@ -4,7 +4,6 @@ LIBS:device
 LIBS:transistors
 LIBS:conn
 LIBS:linear
-LIBS:stereo-cache
 LIBS:regul
 LIBS:74xx
 LIBS:cmos4000
