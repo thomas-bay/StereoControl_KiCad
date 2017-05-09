@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:particle-boards
+LIBS:stereo-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -36,7 +37,7 @@ encoding utf-8
 Sheet 1 1
 Title "Analog Selector"
 Date "2017-04-17"
-Rev "A"
+Rev "B"
 Comp "Thomas Bay"
 Comment1 ""
 Comment2 ""
@@ -558,7 +559,7 @@ L CP C9
 U 1 1 58F52036
 P 8950 1900
 F 0 "C9" H 9067 1946 50  0000 L CNN
-F 1 "1u" H 9067 1855 50  0000 L CNN
+F 1 "100u" H 9067 1855 50  0000 L CNN
 F 2 "" H 8988 1750 50  0001 C CNN
 F 3 "" H 8950 1900 50  0001 C CNN
 	1    8950 1900
@@ -682,7 +683,7 @@ Wire Wire Line
 	7400 1450 7800 1450
 Connection ~ 7800 1450
 Wire Wire Line
-	7800 2400 7400 2400
+	7400 2400 8950 2400
 Connection ~ 7800 1750
 Wire Wire Line
 	7400 2100 7800 2100
@@ -825,4 +826,38 @@ F 3 "" H 10425 3300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10150 3400 10250 3400
+$Comp
+L R R11
+U 1 1 591217D0
+P 8650 2700
+F 0 "R11" H 8720 2746 50  0000 L CNN
+F 1 "100K" H 8720 2655 50  0000 L CNN
+F 2 "" V 8580 2700 50  0001 C CNN
+F 3 "" H 8650 2700 50  0001 C CNN
+	1    8650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R12
+U 1 1 5912187E
+P 8950 2700
+F 0 "R12" H 9020 2746 50  0000 L CNN
+F 1 "100K" H 9020 2655 50  0000 L CNN
+F 2 "" V 8880 2700 50  0001 C CNN
+F 3 "" H 8950 2700 50  0001 C CNN
+	1    8950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2400 8650 2550
+Connection ~ 7800 2400
+Wire Wire Line
+	8950 2400 8950 2550
+Connection ~ 8650 2400
+Wire Wire Line
+	8650 2850 8650 4000
+Wire Wire Line
+	8950 2850 8950 4000
+Connection ~ 8950 4000
+Connection ~ 8650 4000
 $EndSCHEMATC
