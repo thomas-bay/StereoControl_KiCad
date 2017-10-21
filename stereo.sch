@@ -860,4 +860,6 @@ Wire Wire Line
 	8950 2850 8950 4000
 Connection ~ 8950 4000
 Connection ~ 8650 4000
+Text Notes 850  2950 0    60   ~ 0
+SIgnal Levels from BASF preamplifier: +-2,5 V (max)
 $EndSCHEMATC
